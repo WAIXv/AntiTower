@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872cbaa965d1f6e4e98365d74e2060df, type: 3}
+  m_Name: Chara_Test_TransitionTableSO
+  m_EditorClassIdentifier: 
+  _transitions:
+  - FromState: {fileID: 11400000, guid: 14151e3c5c54cb04aa8e28b9b99d94f1, type: 2}
+    ToState: {fileID: 11400000, guid: 37c38a69ed71ee64290d23673274b87d, type: 2}
+    Conditions:
+    - ExpectedResult: 0
+      Condition: {fileID: 11400000, guid: 2f0f153252142c840b3fcd97d988e02d, type: 2}
+      Operator: 0
+  - FromState: {fileID: 11400000, guid: 37c38a69ed71ee64290d23673274b87d, type: 2}
+    ToState: {fileID: 11400000, guid: 7cadb78cbe9760048b927fe8d045d8e7, type: 2}
+    Conditions:
+    - ExpectedResult: 0
+      Condition: {fileID: 11400000, guid: 4c72d78771c379143acc88f5e5e16bda, type: 2}
+      Operator: 0
