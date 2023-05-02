@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a630ca074d24191a5fc078137d112f1, type: 3}
-  m_Name: TestCharactor
+  m_Script: {fileID: 11500000, guid: dfe9e2c22fdc4a75ad5f716804b5fdd4, type: 3}
+  m_Name: IsEntityGettingHit
   m_EditorClassIdentifier: 
-  moveSpeed: 2
