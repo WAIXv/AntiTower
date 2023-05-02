@@ -31,6 +31,7 @@ namespace Charactor
         {
             _detectArea.radius = _detectRange;
             _agent = GetComponent<NavMeshAgent>();
+            _agent.Warp(transform.position);
         }
 
         private void Update()
