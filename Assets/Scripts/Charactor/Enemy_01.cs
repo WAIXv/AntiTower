@@ -66,6 +66,8 @@ namespace Charactor
         {
             if(enable)
             {
+                if(targetLocked) return;
+                
                 _target = other.transform;
                 _targetDamageable = other.GetComponent<Damageable>();
                 targetLocked = true;

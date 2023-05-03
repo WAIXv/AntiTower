@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3d1403170c4d159b0610aa7d4a44d6, type: 3}
+  m_Name: GameManager
+  m_EditorClassIdentifier: 
+  _charactor_0_prefab: {fileID: 26035155276069730, guid: fd65b53167c095147b2649e0cf12f2cb, type: 3}
+  _charactor_1_prefab: {fileID: 0}
+  _charactor_2_prefab: {fileID: 0}
+  CurrentCoinValueChangeEvent: {fileID: 11400000, guid: 07a9f7661bd3fb545a1e0f5d01959f96, type: 2}
+  CoinToWinValueChangeEvent: {fileID: 11400000, guid: 495ec8ee1dbf83a4a81574537ecbb8bb, type: 2}
+  CharactorArrivedEvent: {fileID: 11400000, guid: 280837408a9dac84bab687cffa3f3997, type: 2}
