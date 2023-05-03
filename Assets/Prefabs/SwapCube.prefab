@@ -111,6 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultNextCube: {fileID: 0}
-  nextCube_on: {fileID: 0}
-  nextCube_off: {fileID: 0}
-  toggle: 1
+  nextCubeList:
+  - {fileID: 0}
+  toggle: 0
