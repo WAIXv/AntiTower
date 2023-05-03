@@ -11,5 +11,25 @@ namespace UI
         {
             _gameManager.SpawnCharactor(id);
         }
+
+        public void OnGameStart()
+        {
+            
+        }
+
+        public void OnGameExit()
+        {
+            
+        }
+
+        public void OnNextLevel()
+        {
+            
+        }
+
+        public void OnBackToMain()
+        {
+            
+        }
     }
 }

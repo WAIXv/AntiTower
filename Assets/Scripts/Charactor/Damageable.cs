@@ -34,7 +34,7 @@ namespace Charactor
             Ondie += () =>
             {
                 Debug.Log($"{gameObject.name} Died");
-                Invoke(nameof(SelfDestroy),0.1f);
+                SelfDestroy();
                 // _currentHealthSO.RestoreHealth(_initHealth);
             };
         }
@@ -60,8 +60,16 @@ namespace Charactor
             Debug.Log(gameObject.name + " Received Attack: 【Value】" + delta + ",【NewHealth】" + _currentHealthSO.CurrentHealth);
         }
         
-        private void SelfDestroy() => Destroy(gameObject);
-        
+        public void SelfDestroy()
+        {
+            Invoke(nameof(DestorySelf),0.1f);
+        }
+
+        private void DestorySelf()
+        {
+            Destroy(gameObject);
+        }
+
         private void HitFlashOff() => _spriteRenderer.material = _originMat;
 
     }
