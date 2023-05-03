@@ -489,6 +489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6286910690584376150}
   - component: {fileID: 709370164141728507}
+  - component: {fileID: 1327708224}
   m_Layer: 5
   m_Name: BattleCanvas
   m_TagString: Untagged
@@ -528,3 +529,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6489601743773249775}
   m_CullTransparentMesh: 1
+--- !u!114 &1327708224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6489601743773249775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2175533a298642f4a18c36eabb76b5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinChangedEvent: {fileID: 11400000, guid: 07a9f7661bd3fb545a1e0f5d01959f96, type: 2}

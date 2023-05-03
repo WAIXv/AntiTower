@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Charactor
 {
@@ -12,6 +13,6 @@ namespace Charactor
         public int costValue;
         
         [Header("Broadcasting on")]
-        public IntEventChannelSO CoinToWinValueChangeEvent;
+        public IntEventChannelSO CharactorArrivedEvnet;
     }
 }
