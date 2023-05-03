@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "GameManager", menuName = "Game/Game Manager")]
 public class GameManager : ScriptableObject
 {
+    [Header("Level Config")] 
+    [SerializeField] private List<LevelConfigSO> _levelConfigList;
+
     [Header("Charactors")]
     [SerializeField] private GameObject _charactor_0_prefab;
     [SerializeField] private GameObject _charactor_1_prefab;
@@ -62,6 +66,14 @@ public class GameManager : ScriptableObject
     private void OnCharactorArrived(int delta)
     {
         CoinToWin -= delta;
+        CoinToWinValueChangeEvent.RaiseEvent(CoinToWin);
+    }
+
+    public void OnNewLevelLoad(int index)
+    {
+        CurrentCoin = _levelConfigList[index].InitCoin;
+        CoinToWin = _levelConfigList[index].CoinToWin;
+        CurrentCoinValueChangeEvent.RaiseEvent(CurrentCoin);
         CoinToWinValueChangeEvent.RaiseEvent(CoinToWin);
     }
 }

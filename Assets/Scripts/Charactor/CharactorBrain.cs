@@ -17,7 +17,8 @@ namespace Charactor
         {
             OnArrived += () =>
             {
-                Debug.Log(gameObject.name + " Arrived");
+                Debug.Log($"{gameObject.name} Arrived");
+                data.CharactorArrivedEvnet.RaiseEvent(data.costValue);
             };
         }
     }

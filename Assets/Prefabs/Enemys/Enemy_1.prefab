@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753174236333012201}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.93, y: 2.31, z: 2.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -122,14 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652e535c2a644c29bde5e9c0b1f9d283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _detectRange: 4
+  _detectRange: 1
   _detectArea: {fileID: 1753174236772944897}
   _attackValue: 1
   _attackInterval: 3
   _startPoint: {fileID: 0}
-  _endPoint: {fileID: 0}
-  _chaseSpeed: 1000
-  _recoilSpeed: 0
 --- !u!54 &1753174236333012176
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -233,7 +230,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 3.5
-  m_Height: 16.29
+  m_Radius: 1
+  m_Height: 6.53
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

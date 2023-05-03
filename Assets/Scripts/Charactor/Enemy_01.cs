@@ -14,9 +14,6 @@ namespace Charactor
 
         [Header("Patrol")] 
         [SerializeField] private Transform _startPoint;
-        [SerializeField] private Transform _endPoint;
-        [SerializeField] private float _chaseSpeed;
-        [SerializeField] private float _recoilSpeed;
 
         private Transform _target;
         private Damageable _targetDamageable;
