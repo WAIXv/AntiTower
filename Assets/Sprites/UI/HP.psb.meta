@@ -104,7 +104,7 @@ ScriptedImporter:
       y: 4
       width: 250
       height: 30
-    spriteID: ef3d74a5668b7a34eba4796f4ad48306
+    spriteID: f4cc3032f4bc2c84aacc60b680f2fcad
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -126,7 +126,7 @@ ScriptedImporter:
       y: 4
       width: 234
       height: 14
-    spriteID: 7b6ba2d9d3bbd614c81feb612eb9a1d2
+    spriteID: beec76bae8469af4a8f6416baf2234f8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -204,7 +204,7 @@ ScriptedImporter:
     spriteName: HP_bar
     isGroup: 0
     parentIndex: -1
-    spriteID: ef3d74a5668b7a34eba4796f4ad48306
+    spriteID: f4cc3032f4bc2c84aacc60b680f2fcad
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -214,7 +214,7 @@ ScriptedImporter:
     spriteName: HP
     isGroup: 0
     parentIndex: -1
-    spriteID: 7b6ba2d9d3bbd614c81feb612eb9a1d2
+    spriteID: beec76bae8469af4a8f6416baf2234f8
     layerID: 119047830
     mosaicPosition: {x: 262, y: 4}
     flatten: 0
@@ -224,7 +224,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 2ff729677992c4847a05d4dae5fe06fd
+    spriteID: 859bb9bf477620c4b871247615bc555b
     layerID: -2012904564
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
