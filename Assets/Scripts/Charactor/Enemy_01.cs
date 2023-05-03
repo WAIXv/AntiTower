@@ -64,8 +64,10 @@ namespace Charactor
 
         public void OnCharactorEnter(bool enable, GameObject other)
         {
-            if(enable && !targetLocked)
+            if(enable)
             {
+                if(targetLocked) return;
+                
                 _target = other.transform;
                 _targetDamageable = other.GetComponent<Damageable>();
                 targetLocked = true;
@@ -73,7 +75,7 @@ namespace Charactor
 
                 _prevoiusDistance = Vector3.Distance(transform.position, _target.position);
             }
-            else if(other == _target.gameObject && targetLocked)
+            else if(other == _target.gameObject)
             {
                 Debug.Log($"Unlock {_target.gameObject.name}");
                 targetLocked = false;
