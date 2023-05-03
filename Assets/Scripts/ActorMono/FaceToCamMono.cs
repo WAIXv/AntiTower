@@ -21,7 +21,7 @@ namespace ActorMono
         {
             transform.LookAt(_camTrans.position - _camTrans.forward * 1000f);
             if (LockXRot)
-                transform.rotation = Quaternion.Euler(_originXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+                transform.rotation = Quaternion.Euler(-_originXRot, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
         }
     }
 }

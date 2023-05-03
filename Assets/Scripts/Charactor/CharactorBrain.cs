@@ -21,6 +21,7 @@ namespace Charactor
             {
                 Debug.Log($"{gameObject.name} Arrived");
                 data.CharactorArrivedEvnet.RaiseEvent(data.costValue);
+                Destroy(gameObject);
             };
         }
     }
