@@ -39,13 +39,14 @@ namespace Charactor
                 {
                     _prevoiusAttack = Time.time;
                     DoAttack();
-                    if (_targetDamageable.IsDead)
-                    {
-                        targetLocked = false;
-                        _target = null;
-                        _targetDamageable = null;
-                        return;
-                    }
+                }
+                
+                if (_targetDamageable.IsDead)
+                {
+                    targetLocked = false;
+                    _target = null;
+                    _targetDamageable = null;
+                    return;
                 }
 
                 _agent.destination = _target.transform.position;
