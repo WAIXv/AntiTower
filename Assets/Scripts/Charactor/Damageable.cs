@@ -6,7 +6,7 @@ namespace Charactor
     public class Damageable : MonoBehaviour
     {
         [Header("Health")]
-        [SerializeField] private int _initHealth;
+        [SerializeField] public int _initHealth;
         [SerializeField] private HealthSO _currentHealthSO;
 
         [Header("Combat")] 

@@ -15,6 +15,8 @@ namespace Charactor
 
         private void Awake()
         {
+            GetComponent<Damageable>()._initHealth = data.InitHealth;
+            
             OnArrived += () =>
             {
                 Debug.Log($"{gameObject.name} Arrived");

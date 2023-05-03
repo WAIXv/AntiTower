@@ -5,7 +5,7 @@ namespace ActorMono
 {
     public class FaceToCamMono : MonoBehaviour
     {
-        [SerializeField] private bool LockXRot = false;
+        [SerializeField] private bool LockXRot = true;
 
         private float _originXRot;
         private Transform _camTrans;
