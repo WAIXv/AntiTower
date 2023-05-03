@@ -53,10 +53,14 @@ public class GameManager : ScriptableObject
                 break;
         }
         
+        if(CurrentCoin < go.GetComponent<Charactor.CharactorBrain>().data.costValue) 
+            return;
+        
         //角色初始化
-        var target = LevelStartCube.transform;   
+        var target = LevelStartCube.transform;
         go = Instantiate(go, target.position, target.rotation);
         var charactor = go.GetComponent<Charactor.CharactorBrain>();
+        
         charactor.CurrentCube = LevelStartCube;
 
         CurrentCoin -= charactor.data.costValue;
