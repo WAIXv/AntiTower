@@ -1,23 +1,24 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Charactor
 {
     public class CharactorBrain : MonoBehaviour
     {
-        [SerializeField] private PathNodeCube startCube;
-        
         public CharactorDataSO data;
         public PathNodeCube CurrentCube { get; set; }
-
-        public Vector3 movementVector;
-
+        public Vector3 movementVector { get; set; }
         public bool Arrived { get; set; }
+        
+        public UnityAction OnArrived = delegate { };
 
-        private void OnEnable()
+        private void Awake()
         {
-            CurrentCube = startCube;
-            transform.position = CurrentCube.transform.position;
+            OnArrived += () =>
+            {
+                Debug.Log(gameObject.name + " Arrived");
+            };
         }
     }
 }

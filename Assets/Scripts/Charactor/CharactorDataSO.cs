@@ -7,5 +7,11 @@ namespace Charactor
     {
         [Header("Move")] 
         public float moveSpeed;
+
+        [Header("Coin")] 
+        public int costValue;
+        
+        [Header("Broadcasting on")]
+        public IntEventChannelSO CoinToWinValueChangeEvent;
     }
 }
