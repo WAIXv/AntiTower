@@ -22,11 +22,11 @@ public class MoveToNextCubeAction : StateAction
 	{
 		if(Vector3.Distance(_charactor.transform.position, _nextCube.transform.position) <= 0.1f)
 		{
-			Debug.Log($"Arrived {_nextCube.gameObject.name}");
 			_charactor.CurrentCube = _nextCube;
 			if(_charactor.CurrentCube.IsEndPoint)
 			{
 				_charactor.Arrived = true;
+				_charactor.OnArrived.Invoke();
 				return;
 			}
 			
@@ -39,7 +39,6 @@ public class MoveToNextCubeAction : StateAction
 	{
 		_charactor.movementVector = _charactor.CurrentCube.Direction.normalized * _charactor.data.moveSpeed;
 		_nextCube = _charactor.CurrentCube.NextCube;
-		Debug.Log($"{_nextCube.gameObject.name}");
 
 	}
 	
