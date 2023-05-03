@@ -13,15 +13,19 @@ namespace Charactor
         
         public UnityAction OnArrived = delegate { };
 
+        private Damageable _damageable;
+
         private void Awake()
         {
-            GetComponent<Damageable>()._initHealth = data.InitHealth;
+            _damageable = GetComponent<Damageable>();
+            _damageable._initHealth = data.InitHealth;
             
             OnArrived += () =>
             {
                 Debug.Log($"{gameObject.name} Arrived");
                 data.CharactorArrivedEvnet.RaiseEvent(data.costValue);
-                Destroy(gameObject);
+                _damageable.IsDead = true;
+                _damageable.SelfDestroy();
             };
         }
     }
