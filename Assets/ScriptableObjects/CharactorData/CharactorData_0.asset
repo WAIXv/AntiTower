@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a630ca074d24191a5fc078137d112f1, type: 3}
   m_Name: CharactorData_0
   m_EditorClassIdentifier: 
+  InitHealth: 5
   moveSpeed: 2
   costValue: 4
   CharactorArrivedEvnet: {fileID: 11400000, guid: 8c2805eaab4cef24c975f9d26113c680, type: 2}

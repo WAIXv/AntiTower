@@ -39,6 +39,13 @@ namespace Charactor
                 {
                     _prevoiusAttack = Time.time;
                     DoAttack();
+                    if (_targetDamageable.IsDead)
+                    {
+                        targetLocked = false;
+                        _target = null;
+                        _targetDamageable = null;
+                        return;
+                    }
                 }
 
                 _agent.destination = _target.transform.position;
@@ -52,6 +59,7 @@ namespace Charactor
         private void DoAttack()
         {
             _targetDamageable.ReceiveAnAttack(_attackValue);
+            
         }
 
         private void MoveWithTarget()
