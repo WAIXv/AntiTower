@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ActorMono
 {
-    public class NodeCubeSwitch : MonoBehaviour
+    public class SwitchCube : MonoBehaviour
     {
         [SerializeField] private List<SwapNodeCube> _controlledCubeList;
         [SerializeField] private GameObject _baseYG;
@@ -17,7 +17,7 @@ namespace ActorMono
         private bool _currentState = true;
         private float _targetAngle;
         private float _currentAngle;
-        float _step = 1.8f;
+        float _step = 3f;
 
         private void Awake()
         {
