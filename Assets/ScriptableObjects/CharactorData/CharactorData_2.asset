@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitHealth: 5
   moveSpeed: 2
-  costValue: 4
+  costValue: 50
   CharactorArrivedEvnet: {fileID: 11400000, guid: 8c2805eaab4cef24c975f9d26113c680, type: 2}
