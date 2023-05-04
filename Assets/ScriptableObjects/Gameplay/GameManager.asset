@@ -19,6 +19,7 @@ MonoBehaviour:
   _charactor_0_prefab: {fileID: 26035155276069730, guid: fd65b53167c095147b2649e0cf12f2cb, type: 3}
   _charactor_1_prefab: {fileID: 0}
   _charactor_2_prefab: {fileID: 0}
+  UIActions: {fileID: 11400000, guid: 0a6a4e1462f1d654791965a60ec5658e, type: 2}
   CurrentCoinValueChangeEvent: {fileID: 11400000, guid: 07a9f7661bd3fb545a1e0f5d01959f96, type: 2}
   CoinToWinValueChangeEvent: {fileID: 11400000, guid: 495ec8ee1dbf83a4a81574537ecbb8bb, type: 2}
   CharactorArrivedEvent: {fileID: 11400000, guid: 8c2805eaab4cef24c975f9d26113c680, type: 2}

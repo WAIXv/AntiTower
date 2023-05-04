@@ -9,6 +9,7 @@ namespace Charactor
         [Header("Normal Attack")]
         [SerializeField] private float _detectRange;
         [SerializeField] private CapsuleCollider _detectArea;
+        [SerializeField] private Animator _attackEffectAnim;
         [SerializeField] private int _attackValue;
         [SerializeField] private float _attackInterval;
 
@@ -60,14 +61,9 @@ namespace Charactor
         private void DoAttack()
         {
             _targetDamageable.ReceiveAnAttack(_attackValue);
-            
+            _attackEffectAnim.Play("Appear");
         }
-
-        private void MoveWithTarget()
-        {
-            transform.position = _target.position + _followOffset;
-        }
-
+        
         public void OnCharactorEnter(bool enable, GameObject other)
         {
             if(enable)
