@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: UIActions
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 11400000, guid: 268766bef85f6b249bbba4fda886f661, type: 2}
+  _winCanvasPrefab: {fileID: 8295572363407751120, guid: a456d5260baa1484ba457543a0acb188, type: 3}

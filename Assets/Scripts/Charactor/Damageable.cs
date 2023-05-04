@@ -12,8 +12,13 @@ namespace Charactor
         [Header("Combat")] 
         [SerializeField] private float _hitFlashTime;
         [SerializeField] private Material _hitFlashMaterial;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
 
-        private SpriteRenderer _spriteRenderer;
+        [Header("Shield")]
+        public bool HasShield;
+        public int CurrentShieldValue;
+        [SerializeField] private SpriteRenderer _shieldSpriteRenderer;
+
         
         private Material _originMat;
 
@@ -29,7 +34,7 @@ namespace Charactor
                 _currentHealthSO.SetMaxHealth(_initHealth);
                 _currentHealthSO.SetCurrentHealth(_initHealth);
             }
-            
+            _originMat = _spriteRenderer.material;
             
             Ondie += () =>
             {
@@ -44,13 +49,19 @@ namespace Charactor
             if (IsDead)
                 return;
             
-            GetHit = true;
             //伤害判定
+            if (HasShield)
+            {
+                RestoreShield(delta);
+                return;
+            }
+            
+            GetHit = true;
             _currentHealthSO.ApplyDamage(delta);
             
-            // //受击闪烁
-            // _spriteRenderer.material = _hitFlashMaterial;
-            // Invoke(nameof(HitFlashOff), _hitFlashTime);
+            //受击闪烁
+            _spriteRenderer.material = _hitFlashMaterial;
+            Invoke(nameof(HitFlashOff), _hitFlashTime);
             
             if(_currentHealthSO.CurrentHealth <= 0)
             {
@@ -58,6 +69,13 @@ namespace Charactor
                 Ondie.Invoke();
             }
             Debug.Log(gameObject.name + " Received Attack: 【Value】" + delta + ",【NewHealth】" + _currentHealthSO.CurrentHealth);
+        }
+
+        public void RestoreShield(int delta)
+        {
+            CurrentShieldValue += delta;
+            HasShield = CurrentShieldValue > 0;
+            _shieldSpriteRenderer.enabled = HasShield;
         }
         
         public void SelfDestroy()

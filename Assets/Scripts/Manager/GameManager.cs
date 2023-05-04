@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UI;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "GameManager", menuName = "Game/Game Manager")]
@@ -13,6 +14,8 @@ public class GameManager : ScriptableObject
     [SerializeField] private GameObject _charactor_1_prefab;
     [SerializeField] private GameObject _charactor_2_prefab;
 
+    [SerializeField] private UIActions UIActions;
+
     [Header("Broadcasting on")]
     [SerializeField] private IntEventChannelSO CurrentCoinValueChangeEvent;
     [SerializeField] private IntEventChannelSO CoinToWinValueChangeEvent;
@@ -20,9 +23,12 @@ public class GameManager : ScriptableObject
     [Header("Listening to")] 
     [SerializeField] private IntEventChannelSO CharactorArrivedEvent;
 
+    
     public int CurrentCoin { get; set; }
     public int CoinToWin { get; set; }
     public PathNodeCube LevelStartCube { get; set; }
+    public int CurrentLevelIndex { get; set; } = 0;
+    
 
     private void OnEnable()
     {
@@ -70,8 +76,15 @@ public class GameManager : ScriptableObject
     private void OnCharactorArrived(int delta)
     {
         CoinToWin -= delta;
+        
+        if(CoinToWin < 0)
+        {
+            CoinToWin = 0;
+            UIActions.OnGameWin();
+        }
         CoinToWinValueChangeEvent.RaiseEvent(CoinToWin);
     }
+    
 
     public void OnNewLevelLoad(int index)
     {

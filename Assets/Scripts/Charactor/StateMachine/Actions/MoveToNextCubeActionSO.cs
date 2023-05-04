@@ -13,6 +13,8 @@ public class MoveToNextCubeAction : StateAction
 {
 	private CharactorBrain _charactor;
 	private PathNodeCube _nextCube;
+	private Vector3 _movementVectorBuffer;
+	
 	public override void Awake(UOP1.StateMachine.StateMachine stateMachine)
 	{
 		_charactor = stateMachine.GetComponent<CharactorBrain>();
@@ -22,6 +24,7 @@ public class MoveToNextCubeAction : StateAction
 	{
 		if(Vector3.Distance(_charactor.transform.position, _nextCube.transform.position) <= 0.1f)
 		{
+			Debug.Log($"Arrive at {_nextCube.name}");
 			_charactor.CurrentCube = _nextCube;
 			if(_charactor.CurrentCube.IsEndPoint)
 			{
@@ -31,13 +34,16 @@ public class MoveToNextCubeAction : StateAction
 			}
 			
 			_charactor.movementVector = _nextCube.Direction.normalized * _charactor.data.moveSpeed;
+			_movementVectorBuffer = _charactor.movementVector;
 			_nextCube = _charactor.CurrentCube.NextCube;
 		}
 	}
 	
 	public override void OnStateEnter()
 	{
-		_charactor.movementVector = _charactor.CurrentCube.Direction.normalized * _charactor.data.moveSpeed;
+		if(_movementVectorBuffer == Vector3.zero)
+			_movementVectorBuffer = _charactor.CurrentCube.Direction.normalized * _charactor.data.moveSpeed;
+		_charactor.movementVector = _movementVectorBuffer;
 		_nextCube = _charactor.CurrentCube.NextCube;
 
 	}
