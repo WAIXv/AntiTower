@@ -46,7 +46,7 @@ namespace UI
             Time.timeScale = 0;
             var go = Instantiate(_winCanvasPrefab, Vector3.zero, Quaternion.identity);
             go.transform.SetParent(GameObject.Find("Canvas").transform);
-            go.
+            go.GetComponent<RectTransform>().position = Vector3.zero;
         }
     }
 }
