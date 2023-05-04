@@ -44,9 +44,18 @@ namespace UI
         {
             Debug.LogError("Game Win");
             Time.timeScale = 0;
-            var go = Instantiate(_winCanvasPrefab, Vector3.zero, Quaternion.identity);
-            go.transform.SetParent(GameObject.Find("Canvas").transform);
-            go.GetComponent<RectTransform>().position = Vector3.zero;
+            var canvas = GameObject.Find("Canvas").transform;
+            Instantiate(_winCanvasPrefab,canvas);
+        }
+
+        public void OnPause()
+        {
+            
+        }
+
+        public void OnRestartLevel()
+        {
+            
         }
     }
 }
