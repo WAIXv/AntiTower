@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -789,7 +789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68153267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.78, y: 0.496, z: -3.94}
+  m_LocalPosition: {x: 5.81, y: 0.496, z: -7.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1026,7 +1026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1753174236333012181, guid: 237cc766cc06f33498554fa95c564f68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.7
+      value: 5.74
       objectReference: {fileID: 0}
     - target: {fileID: 1753174236333012181, guid: 237cc766cc06f33498554fa95c564f68, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1034,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1753174236333012181, guid: 237cc766cc06f33498554fa95c564f68, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.08
+      value: -7.36
       objectReference: {fileID: 0}
     - target: {fileID: 1753174236333012181, guid: 237cc766cc06f33498554fa95c564f68, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6256,7 +6256,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -304, y: 438}
+  m_AnchoredPosition: {x: -251, y: 434}
   m_SizeDelta: {x: 88, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752552758
@@ -16196,7 +16196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 546, y: -102}
+  m_AnchoredPosition: {x: 586.8, y: -106}
   m_SizeDelta: {x: 88, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818471171
@@ -19255,7 +19255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 326, y: -104}
+  m_AnchoredPosition: {x: 345.3, y: -106}
   m_SizeDelta: {x: 92, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3101135446249945306
@@ -19396,7 +19396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 436, y: -103}
+  m_AnchoredPosition: {x: 465.8, y: -106}
   m_SizeDelta: {x: 92, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3101135446773882427
@@ -19605,7 +19605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 221, y: -107}
+  m_AnchoredPosition: {x: 226.3, y: -106}
   m_SizeDelta: {x: 92, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3101135446931736010
@@ -19967,5 +19967,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinToWinCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9015670380732996314, guid: c31e7e87fb749e548b866e73f99ef87a, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1812d4a76a3f8fb47934b509cbb8809d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c31e7e87fb749e548b866e73f99ef87a, type: 3}
