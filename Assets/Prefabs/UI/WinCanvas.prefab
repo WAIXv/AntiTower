@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 0a6a4e1462f1d654791965a60ec5658e, type: 2}
         m_TargetAssemblyTypeName: UI.UIActions, Assembly-CSharp
-        m_MethodName: OnNextLevel
+        m_MethodName: OnBackToMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
