@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 11400000, guid: 268766bef85f6b249bbba4fda886f661, type: 2}
   _winCanvasPrefab: {fileID: 8295572363407751120, guid: a456d5260baa1484ba457543a0acb188, type: 3}
+  _loseCanvasPrefab: {fileID: 1217977560050917929, guid: ad9ead9487af4094788c3655e68d7a9c, type: 3}
+  _pauseCanvasPrefab: {fileID: 224410639491848949, guid: c8679d759a607844084be291e1e44981, type: 3}
+  _restartLevelCanvasPrefab: {fileID: 5677630200078272378, guid: 3b1c896e95a7f974dba834e0530590af, type: 3}

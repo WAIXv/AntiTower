@@ -23,3 +23,4 @@ MonoBehaviour:
   CurrentCoinValueChangeEvent: {fileID: 11400000, guid: 07a9f7661bd3fb545a1e0f5d01959f96, type: 2}
   CoinToWinValueChangeEvent: {fileID: 11400000, guid: 495ec8ee1dbf83a4a81574537ecbb8bb, type: 2}
   CharactorArrivedEvent: {fileID: 11400000, guid: 8c2805eaab4cef24c975f9d26113c680, type: 2}
+  CharactorDieEvent: {fileID: 11400000, guid: 715ac6e543520ec488689cfdfda43a43, type: 2}

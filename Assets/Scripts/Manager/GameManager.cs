@@ -22,22 +22,37 @@ public class GameManager : ScriptableObject
 
     [Header("Listening to")] 
     [SerializeField] private IntEventChannelSO CharactorArrivedEvent;
-
+    [SerializeField] private VoidEventChannelSO CharactorDieEvent;
     
     public int CurrentCoin { get; set; }
     public int CoinToWin { get; set; }
     public PathNodeCube LevelStartCube { get; set; }
     public int CurrentLevelIndex { get; set; } = 0;
-    
+    public int CurrentCharactorCount
+    {
+        get => _currentCharactorCount;
+        set
+        {
+            _currentCharactorCount = value;
+            if (_currentCharactorCount <= 0 && CurrentCoin < 10)
+            {
+                UIActions.OnGameLose();
+            }
+        }
+    }
+
+    private int _currentCharactorCount = 0;
 
     private void OnEnable()
     {
         CharactorArrivedEvent.OnEventRaised += OnCharactorArrived;
+        CharactorDieEvent.OnEventRaised += OnCharactorDie;
     }
 
     private void OnDisable()
     {
         CharactorArrivedEvent.OnEventRaised -= OnCharactorArrived;
+        CharactorDieEvent.OnEventRaised -= OnCharactorDie;
     }
 
     public void SpawnCharactor(int id)
@@ -63,6 +78,7 @@ public class GameManager : ScriptableObject
             return;
         
         //角色初始化
+        CurrentCharactorCount++;
         var target = LevelStartCube.transform;
         go = Instantiate(go, target.position, target.rotation);
         var charactor = go.GetComponent<Charactor.CharactorBrain>();
@@ -76,6 +92,7 @@ public class GameManager : ScriptableObject
     private void OnCharactorArrived(int delta)
     {
         CoinToWin -= delta;
+        CurrentCharactorCount--;
         
         if(CoinToWin < 0)
         {
@@ -85,12 +102,18 @@ public class GameManager : ScriptableObject
         CoinToWinValueChangeEvent.RaiseEvent(CoinToWin);
     }
     
+    private void OnCharactorDie()
+    {
+        CurrentCharactorCount--;
+    }
+    
 
     public void OnNewLevelLoad(int index)
     {
         Time.timeScale = 1f;
         CurrentCoin = _levelConfigList[index].InitCoin;
         CoinToWin = _levelConfigList[index].CoinToWin;
+        CurrentCharactorCount = 0;
         CurrentCoinValueChangeEvent.RaiseEvent(CurrentCoin);
         CoinToWinValueChangeEvent.RaiseEvent(CoinToWin);
     }

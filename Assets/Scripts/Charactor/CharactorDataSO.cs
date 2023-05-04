@@ -17,5 +17,6 @@ namespace Charactor
         
         [Header("Broadcasting on")]
         public IntEventChannelSO CharactorArrivedEvnet;
+        public VoidEventChannelSO CharactorDieEvent;
     }
 }

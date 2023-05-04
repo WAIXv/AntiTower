@@ -16,3 +16,4 @@ MonoBehaviour:
   moveSpeed: 2
   costValue: 30
   CharactorArrivedEvnet: {fileID: 11400000, guid: 8c2805eaab4cef24c975f9d26113c680, type: 2}
+  CharactorDieEvent: {fileID: 11400000, guid: 715ac6e543520ec488689cfdfda43a43, type: 2}

@@ -19,6 +19,7 @@ namespace Charactor
         {
             _damageable = GetComponent<Damageable>();
             _damageable._initHealth = data.InitHealth;
+            _damageable.Ondie += data.CharactorDieEvent.OnEventRaised;
             
             OnArrived += () =>
             {
