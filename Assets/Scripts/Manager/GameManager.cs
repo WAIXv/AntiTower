@@ -88,6 +88,7 @@ public class GameManager : ScriptableObject
 
     public void OnNewLevelLoad(int index)
     {
+        Time.timeScale = 1f;
         CurrentCoin = _levelConfigList[index].InitCoin;
         CoinToWin = _levelConfigList[index].CoinToWin;
         CurrentCoinValueChangeEvent.RaiseEvent(CurrentCoin);
